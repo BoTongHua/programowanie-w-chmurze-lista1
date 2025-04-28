@@ -1,5 +1,5 @@
 import time
-from core.events import Type1Event
+from domain.events import Type1Event
 from infrastructure.messaging import RabbitMQConnection, RabbitMQConsumer
 from publishers.publisher1 import setup_logger
 
