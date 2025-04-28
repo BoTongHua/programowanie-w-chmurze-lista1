@@ -1,6 +1,6 @@
 import time
 from datetime import datetime
-from core.events import Type3Event, Type4Event
+from domain.events import Type3Event, Type4Event
 from infrastructure.messaging import RabbitMQConnection, RabbitMQPublisher, RabbitMQConsumer
 from publishers.publisher1 import setup_logger
 

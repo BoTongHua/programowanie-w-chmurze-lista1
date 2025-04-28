@@ -1,7 +1,7 @@
 import time
 import random
 from datetime import datetime
-from core.events import Type2Event
+from domain.events import Type2Event
 from infrastructure.messaging import RabbitMQConnection, RabbitMQPublisher
 from publishers.publisher1 import setup_logger
 
