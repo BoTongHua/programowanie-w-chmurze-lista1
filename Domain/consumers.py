@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 
 class Consumer(ABC):
-    """Interface for all consumers"""
+    """Interface for all Consumers"""
 
     @abstractmethod
     def consume(self, event):

@@ -1,7 +1,7 @@
 import time
-from domain.events import Type4Event
-from infrastructure.messaging import RabbitMQConnection, RabbitMQConsumer
-from publishers.publisher1 import setup_logger
+from Domain.events import Type4Event
+from Infrastructure.messaging import RabbitMQConnection, RabbitMQConsumer
+from Domain.Publishers.publisher1 import setup_logger
 
 
 def run_consumer4(connection_string="amqps://username:password@hostname/vhost"):

@@ -1,8 +1,8 @@
 import time
 import logging
 from datetime import datetime
-from domain.events import Type1Event
-from infrastructure.messaging import RabbitMQConnection, RabbitMQPublisher
+from Domain.events import Type1Event
+from Infrastructure.messaging import RabbitMQConnection, RabbitMQPublisher
 
 
 def setup_logger(name):
@@ -32,7 +32,7 @@ def run_publisher1(instance_id="1", connection_string="amqps://username:password
             event = Type1Event(data=f"Type1 event from instance {instance_id} at {datetime.now()}")
             logger.info(f"Publishing Type1Event: {event.data}")
             publisher.publish(event)
-            time.sleep(5)  # Fixed interval for Type1 publishers
+            time.sleep(5)  # Fixed interval for Type1 Publishers
     except KeyboardInterrupt:
         logger.info("Publisher interrupted, shutting down...")
     finally:

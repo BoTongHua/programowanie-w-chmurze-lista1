@@ -1,6 +1,6 @@
 import argparse
 
-from consumers.consumer3 import run_consumer3
+from Domain.Consumers.consumer3 import run_consumer3
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Type3 Event Consumer')

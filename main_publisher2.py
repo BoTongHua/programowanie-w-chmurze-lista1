@@ -1,6 +1,6 @@
 import argparse
 
-from publishers.publisher2 import run_publisher2
+from Domain.Publishers.publisher2 import run_publisher2
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Type2 Event Publisher')

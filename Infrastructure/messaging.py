@@ -1,8 +1,8 @@
 import pika
 import json
 import logging
-from domain.publishers import Publisher
-from domain.consumers import Consumer
+from Domain.publishers import Publisher
+from Domain.consumers import Consumer
 
 
 class RabbitMQConnection:

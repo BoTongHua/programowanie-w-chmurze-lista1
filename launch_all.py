@@ -1,20 +1,20 @@
 import multiprocessing
 import argparse
 
-from consumers.consumer1 import run_consumer1
-from consumers.consumer2 import run_consumer2
-from consumers.consumer3 import run_consumer3
-from consumers.consumer4 import run_consumer4
-from publishers.publisher1 import run_publisher1
-from publishers.publisher2 import run_publisher2
-from publishers.publisher3 import run_publisher3
+from Domain.Consumers.consumer1 import run_consumer1
+from Domain.Consumers.consumer2 import run_consumer2
+from Domain.Consumers.consumer3 import run_consumer3
+from Domain.Consumers.consumer4 import run_consumer4
+from Domain.Publishers.publisher1 import run_publisher1
+from Domain.Publishers.publisher2 import run_publisher2
+from Domain.Publishers.publisher3 import run_publisher3
 
 
 def launch_all_components(connection_string):
     """Launch all components of the message broker system"""
     processes = []
 
-    # Launch Type1 publishers (3 instances)
+    # Launch Type1 Publishers (3 instances)
     for i in range(1, 4):
         p = multiprocessing.Process(
             target=run_publisher1,
@@ -39,7 +39,7 @@ def launch_all_components(connection_string):
     p.start()
     processes.append(p)
 
-    # Launch Type1 consumers (2 instances)
+    # Launch Type1 Consumers (2 instances)
     for i in range(1, 3):
         p = multiprocessing.Process(
             target=run_consumer1,
