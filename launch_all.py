@@ -1,5 +1,4 @@
 import multiprocessing
-import sys
 import argparse
 
 from consumers.consumer1 import run_consumer1
