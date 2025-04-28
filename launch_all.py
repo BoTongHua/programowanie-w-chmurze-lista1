@@ -1,13 +1,13 @@
 import multiprocessing
 import argparse
 
-from domain.consumers.consumer1 import run_consumer1
-from domain.consumers.consumer2 import run_consumer2
-from domain.consumers.consumer3 import run_consumer3
-from domain.consumers.consumer4 import run_consumer4
-from domain.publishers.publisher1 import run_publisher1
-from domain.publishers.publisher2 import run_publisher2
-from domain.publishers.publisher3 import run_publisher3
+from consumers.consumer1 import run_consumer1
+from consumers.consumer2 import run_consumer2
+from consumers.consumer3 import run_consumer3
+from consumers.consumer4 import run_consumer4
+from publishers.publisher1 import run_publisher1
+from publishers.publisher2 import run_publisher2
+from publishers.publisher3 import run_publisher3
 
 
 def launch_all_components(connection_string):
